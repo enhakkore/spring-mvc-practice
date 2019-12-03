@@ -7,7 +7,7 @@
  */
 
 apply plugin: 'java'
-apply from: 'https://raw.github.com/gretty-gradle-plugin/gretty/master/pluginScripts/gretty.plugin'
+//apply from: 'https://raw.github.com/gretty-gradle-plugin/gretty/master/pluginScripts/gretty.plugin'
 
 repositories {
     // Use jcenter for resolving dependencies.
@@ -29,8 +29,11 @@ dependencies {
     compile "org.springframework:spring-context:${springVersion}"
     compile "org.springframework:spring-beans:${springVersion}"
     compile "org.springframework:spring-webmvc:${springVersion}"
-    compile "org.springframework:spring-oxm:${springVersion}"
+//    compile "org.springframework:spring-oxm:${springVersion}"
     compile "org.slf4j:slf4j-simple:1.7.25"
+
+    compileOnly 'org.projectlombok:lombok:1.18.10'
+    annotationProcessor 'org.projectlombok:lombok:1.18.10'
 
     // This dependency is used by the application.
     implementation 'com.google.guava:guava:28.0-jre'
