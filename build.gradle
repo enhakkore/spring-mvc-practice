@@ -7,7 +7,8 @@
  */
 
 apply plugin: 'java'
-//apply from: 'https://raw.github.com/gretty-gradle-plugin/gretty/master/pluginScripts/gretty.plugin'
+apply plugin: 'war'
+apply from: 'https://raw.github.com/gretty-gradle-plugin/gretty/master/pluginScripts/gretty.plugin'
 
 repositories {
     // Use jcenter for resolving dependencies.
