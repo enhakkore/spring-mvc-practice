@@ -5,6 +5,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 
 @Getter
 @Setter
@@ -16,4 +17,9 @@ public class Reservation {
     private int hour;
     private Player player;
     private SportType sportType;
+
+    public String getDate() {
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+        return Date.format(formatter);
+    }
 }

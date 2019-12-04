@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 
 @Configuration
 @RequestMapping("/welcome")
@@ -17,7 +18,8 @@ public class WelcomeController {
     public String welcome(Model model){
 
         LocalDate today = LocalDate.now();
-        model.addAttribute("today", today);
+        String tmp = today.format(DateTimeFormatter.ofPattern("yyyy-MM-dd"));
+        model.addAttribute("today", tmp);
         return "welcome";
     }
 }

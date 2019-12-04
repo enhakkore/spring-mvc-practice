@@ -6,6 +6,6 @@
 </head>
 <body>
 <h2>Welcome to Chimney Reservation System</h2>
-Today is <fmt:formatDate value="${today}" pattern="yyyy-MM-dd" />
+Today is ${today}
 </body>
 </html>

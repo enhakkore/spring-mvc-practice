@@ -30,8 +30,10 @@ dependencies {
     compile "org.springframework:spring-context:${springVersion}"
     compile "org.springframework:spring-beans:${springVersion}"
     compile "org.springframework:spring-webmvc:${springVersion}"
-//    compile "org.springframework:spring-oxm:${springVersion}"
     compile "org.slf4j:slf4j-simple:1.7.25"
+
+    // Use JSTL on JSP
+    compile group: 'javax.servlet', name: 'jstl', version: '1.2'
 
     compileOnly 'org.projectlombok:lombok:1.18.10'
     annotationProcessor 'org.projectlombok:lombok:1.18.10'

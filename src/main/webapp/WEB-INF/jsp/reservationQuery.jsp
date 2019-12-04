@@ -29,10 +29,10 @@
     </tr>
     <c:forEach items="${reservations}" var="reservation">
         <tr>
-            <td>${reservation.Name}</td>
-            <td><fmt:formatDate value="${reservation.Date}" pattern="yyyy-MM-dd" /></td>
+            <td>${reservation.name}</td>
+            <td>${reservation.date}</td>
             <td>${reservation.hour}</td>
-            <td>${reservation.player.Name}</td>
+            <td>${reservation.player.name}</td>
         </tr>
     </c:forEach>
 </table>
